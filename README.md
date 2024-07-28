@@ -1,4 +1,3 @@
-# MyResume
 # Hosting Resume on AWS EC2 Instance with CI/CD setup using GitHub Actions
 ### Step 1: Go to EC2 from AWS Console 
 
