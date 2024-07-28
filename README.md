@@ -31,23 +31,23 @@
   * Click on New Repository Secrete (You need to create 4 secrets)
   ***Note***: *For easy Understanding Use exactly the same Repository secret names*
   * ###### Secret 1
-      * Name exactly this ''EC2_SSH_KEY'' and secret is your keypair 
+      * Name exactly this `EC2_SSH_KEY` and secret is your keypair 
       * Open your key pair in your computer and Copy the complete Key including
-        ' -----BEGIN RSA PRIVATE KEY----- '
-        ' -----END RSA PRIVATE KEY----- '
+        ` -----BEGIN RSA PRIVATE KEY----- `
+        ` -----END RSA PRIVATE KEY----- `
       * Paste the key in the secret and Click *Add secret*
   * ###### Secret 2
-      * Name Exactly this 'HOST_DNS' and secret is your AWS provided Public IPv4 DNS for your Instance
-      * It will something look like this 'ec2-xx-xxx-xxx.compute-x.amazonaws.com'
+      * Name Exactly this `HOST_DNS` and secret is your AWS provided Public IPv4 DNS for your Instance
+      * It will something look like this `ec2-xx-xxx-xxx.compute-x.amazonaws.com`
       * Copy this type of Public IPv4 DNS given by AWS for your Instance and paste in the secret and Click *Add Secret*
   * ###### Secret 3
-      * Name Exactly this 'TARGET_DIR'
-      * secret is 'home' and Click *Add secret*
+      * Name Exactly this `TARGET_DIR`
+      * secret is `home` and Click *Add secret*
   * ###### Secret 4
-      * Name Exactly this 'USERNAME'
-      * secret is 'Ubuntu' and Click *Add secret*
+      * Name Exactly this `USERNAME`
+      * secret is `Ubuntu` and Click *Add secret*
         
 ### Step 5: GitHub Actions
-  * Create a new file name using(Add File) with name extension as '.github/workflows'
-  * open this file(i.e., workflows folder) Create another file (Add File) with name extension as 'github-actions-ec2.yml'
+  * Create a new file name using(Add File) with name extension as `.github/workflows`
+  * open this file(i.e., workflows folder) Create another file (Add File) with name extension as `github-actions-ec2.yml`
   * 
