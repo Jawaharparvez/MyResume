@@ -29,7 +29,7 @@
   * On top open *settings* inside your repository
   * On left side there is security containing ***Secrete and Variables*** open it
   * Click on New Repository Secrete (You need to create 4 secrets)
-  ***Note***: *For easy Understanding Use exactly the same Repository secret names*
+  ***Note***: *For Easy Understanding Use Exactly The Same Repository Secret Names*
   * ###### Secret 1
       * Name exactly this `EC2_SSH_KEY` and secret is your keypair 
       * Open your key pair in your computer and Copy the complete Key including <br>
@@ -49,5 +49,46 @@
         
 ### Step 5: GitHub Actions
   * Create a new file name using(Add File) with name extension as `.github/workflows`
-  * open this file(i.e., workflows folder) Create another file (Add File) with name extension as `github-actions-ec2.yml`
-  * 
+  * Open this file(i.e., workflows folder) Create another file (Add File) with name extension as `github-actions-ec2.yml`
+  * Open `github-actions-ec2.yml` once you open this it will show enter file contens here **Just Copy and Paste this**
+
+```
+name: Push-to-EC2
+
+# Trigger deployment only on push to main branch
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    name: Deploy to EC2 on master branch push
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout the files
+        uses: actions/checkout@v2
+
+      - name: Deploy to Server 1
+        uses: easingthemes/ssh-deploy@main
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}
+          REMOTE_HOST: ${{ secrets.HOST_DNS }}
+          REMOTE_USER: ${{ secrets.USERNAME }}
+          TARGET: ${{ secrets.TARGET_DIR }}
+
+      - name: Executing remote ssh commands using ssh key
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST_DNS }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.EC2_SSH_KEY }}
+          script: |
+            sudo apt-get -y update
+            sudo apt-get install -y apache2
+            sudo systemctl start apache2
+            sudo systemctl enable apache2
+            cd home
+            sudo mv * /var/www/html
+```
