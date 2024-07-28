@@ -32,8 +32,8 @@
   ***Note***: *For easy Understanding Use exactly the same Repository secret names*
   * ###### Secret 1
       * Name exactly this `EC2_SSH_KEY` and secret is your keypair 
-      * Open your key pair in your computer and Copy the complete Key including
-        ` -----BEGIN RSA PRIVATE KEY----- `
+      * Open your key pair in your computer and Copy the complete Key including <br>
+        ` -----BEGIN RSA PRIVATE KEY----- ` <br>
         ` -----END RSA PRIVATE KEY----- `
       * Paste the key in the secret and Click *Add secret*
   * ###### Secret 2
