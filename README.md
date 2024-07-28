@@ -21,5 +21,5 @@
   * Click On *Select existing security group* select on the security group we created in step 2
   * Leave the Configure Storage the same
   * Click on **Launch Instance**
- 
+### Step 4: 
 
