@@ -92,3 +92,5 @@ jobs:
             cd home
             sudo mv * /var/www/html
 ```
+  * Click *Commit Changes*
+    
