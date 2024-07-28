@@ -2,7 +2,7 @@
 # Hosting Resume on AWS EC2 Instance with CI/CD setup using GitHub Actions
 ### Step 1: Go to EC2 from AWS Console 
 
-### > Step 2: Create a new Security Group
+>### Step 2: Create a new Security Group
   * Go to Security Groups in EC2 Dashboard
   * Select Create Security Group (My SecurityGroupName: Linux-SG)
   > * Inbound Rules
@@ -10,8 +10,8 @@
   > * ***Type***:SSH  ***Port Range***: 22 ***Source***: Anywhere-IPv4 (0.0.0.0/0)
   > * ***Type***:HTTP  ***Port Range***: 80 ***Source***: Anywhere-IPv4 (0.0.0.0/0)
   > * ***Type***:HTTPS  ***Port Range***: 443 ***Source***: Anywhere-IPv4 (0.0.0.0/0)
->   * 
-  > * Then Click On **Create Security Group**
+  >  
+  * Then Click On **Create Security Group**
  
 ### Step 3: Create EC2 Instance
   * Click on Launch Instance
