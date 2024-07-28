@@ -93,5 +93,6 @@ jobs:
             sudo mv * /var/www/html
 ```
   * Click *Commit Changes*
-#### Continuous Integration / Continuous Deployment
-  ---Whenever you change the index.html file content and commiting change you'll automatically see the instance's content reflects the change
+  * 
+#### Continuous Integration / Continuous Deployment (CI/CD)
+  * Whenever you change the index.html file content and commiting change you'll automatically see the instance's content reflects the change
